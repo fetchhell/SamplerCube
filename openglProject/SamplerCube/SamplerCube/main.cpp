@@ -158,11 +158,11 @@ bool init() {
 		string(shaderPath + ".fs").c_str())) return false;
 
 	/* load 3ds model */
-	scene.getObject().getMesh().loadModel("../objects/Cube.3ds");
+	scene.getObject().getMesh().loadModel("../objects/figures.3ds");
 
 	/* build matrices */
 	scene.getCamera().buildFrustrumMatf(scene.getScreenWidth(), scene.getScreenHeight(), 2.f, 10000.f);
-	scene.getCamera().buildViewMatf(vec3f(0,150,-500), vec3f(0,150,-1), vec3f(0,1,0));
+	scene.getCamera().buildViewMatf(vec3f(0,500,-500), vec3f(0,500,-1), vec3f(0,1,0));
 	scene.getCamera().buildModelViewProjection();
 
 	/* generate VBO object */
